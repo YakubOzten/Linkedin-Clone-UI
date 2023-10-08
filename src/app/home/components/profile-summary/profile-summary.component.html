@@ -1,0 +1,38 @@
+<ion-card>
+ <div [style.background]="this.BannerColorService.bannerColors.colortwo"  class="backdrop">
+  <div [style.background]="this.BannerColorService.bannerColors.colorOne" class="background-one"> </div>
+    <div [style.background]="this.BannerColorService.bannerColors.colorOne" class="half-ellipse"></div>
+    <div [style.background]="this.BannerColorService.bannerColors.colortwo" class="background-two"></div>
+    <div [style.background]="this.BannerColorService.bannerColors.colorthree"  class="background-three"></div>
+  </div>
+  <ion-card-header class="ion-text-center">
+    <input  #fileUpload (change)="onFileSelect($event)" style="display: none;" type="file">
+    <ion-avatar (click)="fileUpload.click()" style="cursor: pointer;" class="ion-margion-auto">
+        <ion-img *ngIf="userFullImagePath"    [src]="userFullImagePath"></ion-img>
+    </ion-avatar>
+     
+    <ion-card-title class="ion-margin-top">
+     {{fullName}}
+    </ion-card-title>
+    <ion-card-subtitle>Full stack devoloper</ion-card-subtitle>
+  </ion-card-header>
+
+  <div class="item-divider"></div>
+
+  <ion-card-content>
+    <div>
+        <span>who viewed your profile</span>
+        <ion-text color="primary">478</ion-text>
+
+       
+    </div>
+    <div class="connections">
+        <span>Connections </span>
+        <ion-text color="primary">684</ion-text>
+            
+        
+    </div>
+    <ion-card-subtitle color="dark">Manage your network</ion-card-subtitle>
+  </ion-card-content>
+
+</ion-card>
